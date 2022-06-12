@@ -1,10 +1,15 @@
-
 import './App.css';
-import Phonebook from './component/Phonebook';
+import { Mainpage } from './component/Mainpage';
+
+import {Navbar, Nav, Container} from 'react-bootstrap';         
+
 function App() {
+  
   return (
     <div className="App">
-      <Phonebook/>
+      <>
+      <Mainpage/>
+      </>
     </div>
   );
 }

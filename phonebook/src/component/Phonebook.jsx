@@ -1,11 +1,13 @@
-import './Phonebook.css'
+import './Phonebook.css';
+import Header from './Header';
 const Phonebook = ()=>{
     return(
   <>
   <div className="wrapper">
   <header>
- <h1 id="title">Contact Book</h1>
-            
+ {/* <h1 id="title">Contact Book</h1> */}
+    <Header/>  
+    </header>      
   <form id="headFrm">    
     <div id="ss">                          
                 <p className="pp">Search By :</p>
@@ -23,7 +25,7 @@ const Phonebook = ()=>{
                 <input type="text" name="search" id="searchContact" placeholder="Search Here..."required/>
                     <br/><br/>
                         </form>
-                        </header>
+                     
 <main>
                         <h2>Add Contact</h2>
             <form id="frm" name="info" >
