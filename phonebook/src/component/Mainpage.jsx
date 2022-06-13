@@ -64,6 +64,7 @@ export const Mainpage = () => {
         <Routes>
        <Route path="/" element={<p>hello</p>} />
        <Route path={"allcontact"} element={<Table user={user} users={users} setUser={setUser} setUsers={setUsers} />} />
+       {/* <Route path={"allcontact/:FORM"} element={<Form user={user} users={users} setUser={setUser} setUsers={setUsers} />} /> */}
               <Route path={"family"} element={<Family user={user} users={users} setUser={setUser} setUsers={setUsers}/>} />
               <Route path={"friend"} element={<Friend user={user} setUser={setUser} />} />
      </Routes>

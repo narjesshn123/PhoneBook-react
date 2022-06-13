@@ -253,3 +253,18 @@ th{
     border-top: black;
     color:black;
 }
+.trash{
+    cursor: pointer;
+}
+.trash:hover{
+    color: #40e3ee;
+}
+.right-form{
+    margin-left: 45rem;
+    margin-top: -25rem;
+    min-height: calc(100% - 123px);
+    width: 40%;
+    position: absolute;
+    margin-right: 240px;
+    visibility: visible;  
+}
