@@ -3,19 +3,13 @@ import { Students } from './Students';
 import React, { Children } from 'react';
 import { useState } from 'react';
 import { Button } from './Button';
-import {Form } from './Form';
-
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom"  
+import {Form } from './Form'; 
     export const Table = ({users, setUser, setUsers, user, Children}) => {
-      const [show, setShow] = useState(true);
+      const [show, setShow] = useState(false);
         const handleDelete = (id) => {
             setUsers(users.filter(user => user.id !== id))
         }
+      
           return( 
           <>
            <input type="text" name="search" id="searchContact" placeholder="Search Here..."required/>
