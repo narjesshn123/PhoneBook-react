@@ -17,10 +17,12 @@ setName({...names,[e.target.name]: e.target.value})
   }
   const HandleAdd = (e)=>{
     e.preventDefault()
-    const newContact = contacts.concat({...names, id:uuidv4()})
-    setContact(newContact)
-    setName('')
-    navigate("/contact/List")
+    // const newContact = contacts.concat({...names, id:uuidv4()})
+    // setContact(newContact)
+    setContact([...contacts, {id:9, ...names}])
+    setName({name:"", mobile:"", photo:"", email:""})
+    // setName([{id:9, name:"", mobile:"", photo:"", email:"" }])
+    navigate("/contact/List" )
   }
    
   return (
