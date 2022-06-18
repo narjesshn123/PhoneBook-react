@@ -88,9 +88,6 @@ export const ContactList = ({contacts, setContact,setName, names}) => {
                 </ul>
               </div>
               <div className='col-md-1 d-flex flex-column align-items-center'>
-                <Link to={`/contact/view/${contact.id}`} className='btn btn-warning my-1'>
-                 <i className='fa fa-eye'/>
-                </Link>
                 <Link to={`/contact/Edit/${contact.id}`} onClick={()=>{setName(contact)}} className='btn btn-primary my-1'>
                  <i className='fa fa-pen'/>
                 </Link>

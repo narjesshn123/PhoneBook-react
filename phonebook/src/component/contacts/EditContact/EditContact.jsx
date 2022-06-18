@@ -6,10 +6,8 @@ export const EditContact = ({contacts, setContact, names, setName}) => {
 const handleEdit=(e)=>{
   e.preventDefault()
   if(names.id){
-    setContact(contacts.map(oldContact=>oldContact.id === names.id ? names : oldContact ))
-
+    setContact(contacts.map(oldContact => oldContact.id === names.id ? names : oldContact ))
   }
-  // setContact([ {...names},...contacts])
   navigate("/contact/List")
 }
 const handleChange = (e)=>{

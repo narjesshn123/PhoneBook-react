@@ -4,7 +4,6 @@ import { Navbar } from './component/Navbar/Navbar';
 import {ContactList} from './component/contacts/ContactList/ContactList';             
 import {AddContact} from './component/contacts/AddContact/AddContact';           
 import {EditContact} from './component/contacts/EditContact/EditContact';         
-import {ViewContact} from './component/contacts/ViewContact/ViewContact'; 
 import { ContactName } from './component/contacts/ContactName/ContactName';         
 import { useState } from 'react';                   
 // import {Navbar, Nav, Container} from 'react-bootstrap';
@@ -32,7 +31,6 @@ function App() {
         <Route path={'/contact/List'} element={<ContactList contacts={contacts} setContact={setContact} names={names} setName={setName}/>}/>
         <Route path={'/contact/Add'} element={<AddContact contacts={contacts} setContact={setContact}  names={names} setName={setName}/>}/>
         <Route path={'/contact/Edit/:contactId'} element={<EditContact contacts={contacts} setContact={setContact}  names={names} setName={setName}/>}/>
-        <Route path={'/contact/View/:contactId'} element={<ViewContact/>}/>
       </Routes>
 
       </>
