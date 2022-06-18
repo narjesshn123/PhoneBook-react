@@ -18,8 +18,6 @@ setName({...names,[e.target.name]: e.target.value})
   const HandleAdd = (e)=>{
     e.preventDefault()
     const newContact = contacts.concat({...names, id:uuidv4()})
-    // setContact( { name:"", email:"", mobile:"", photo:""})
-    // setName([...contacts])
     setContact(newContact)
     setName('')
     navigate("/contact/List")
@@ -49,17 +47,6 @@ setName({...names,[e.target.name]: e.target.value})
               </div>
               <div className='mb-2'>
                 <input type={"text"} name="email" value={names.email} onChange={HandleChange} className="form-control" placeholder='Email'/>
-              </div>
-              <div className='mb-2'>
-                <input type={"text"} className="form-control" placeholder='Company'/>
-              </div>
-              <div className='mb-2'>
-                <input type={"text"} className="form-control" placeholder='Title'/>
-              </div>
-              <div className='mb-2'>
-                <select className='form-control'>
-                  <option value=''>select a group</option>
-                </select>
               </div>
               <div className='mb-2'>
                 <input  type={"submit"} className="btn btn-success" placeholder='create'/>       
