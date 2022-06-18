@@ -14,8 +14,14 @@ import {
   Navigate
 } from "react-router-dom"        
 
-function App(props) {
+function App() {
   const [contacts, setContact] = useState(ContactName)
+  const[names,setName] = useState({
+    name:"",
+    email:"",
+    photo:"",
+    mobile:""
+  })
   return (
     <div className="App">
       <>
@@ -23,9 +29,9 @@ function App(props) {
       <Navbar/>
       <Routes>
         <Route path={'/'} element={<Navigate to={'/contact/list'}/>}/>
-        <Route path={'/contact/List'} element={<ContactList contacts={contacts} setContact={setContact}/>}/>
-        <Route path={'/contact/Add'} element={<AddContact contacts={contacts} setContact={setContact}/>}/>
-        <Route path={'/contact/Edit'} element={<EditContact/>}/>
+        <Route path={'/contact/List'} element={<ContactList contacts={contacts} setContact={setContact} names={names} setName={setName}/>}/>
+        <Route path={'/contact/Add'} element={<AddContact contacts={contacts} setContact={setContact}  names={names} setName={setName}/>}/>
+        <Route path={'/contact/Edit/:contactId'} element={<EditContact contacts={contacts} setContact={setContact}  names={names} setName={setName}/>}/>
         <Route path={'/contact/View/:contactId'} element={<ViewContact/>}/>
       </Routes>
 

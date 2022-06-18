@@ -3,14 +3,9 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ContactName } from '../ContactName/ContactName'
 import { v4 as uuidv4 } from 'uuid';
-export const AddContact = ({contacts, setContact}) => {
+export const AddContact = ({contacts, setContact, names, setName}) => {
   let navigate = useNavigate();             
-  const[names,setName] = useState({
-    name:"",
-    email:"",
-    photo:"",
-    mobile:""
-  })
+
 
   const HandleChange = (e)=>{
 setName({...names,[e.target.name]: e.target.value})

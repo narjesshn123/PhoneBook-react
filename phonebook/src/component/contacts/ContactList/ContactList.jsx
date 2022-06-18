@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import 'D:/react/PhoneBook/PhoneBook-react/phonebook/src/index.css';
 import { ContactName } from '../ContactName/ContactName';
-export const ContactList = ({contacts, setContact}) => {
+export const ContactList = ({contacts, setContact,setName, names}) => {
 
   //setContact(props.contacts.contact)//
   const handleDelete = (id) => {
@@ -73,6 +73,9 @@ export const ContactList = ({contacts, setContact}) => {
               </div>
               <div className='col-md-7'>
                 <ul className='list-group'>
+                <li className='list-group-item list-group-item-action'>
+                    name: <span className='fw-bold'>{contact.id}</span>
+                  </li>
                   <li className='list-group-item list-group-item-action'>
                     name: <span className='fw-bold'>{contact.name}</span>
                   </li>
@@ -88,7 +91,7 @@ export const ContactList = ({contacts, setContact}) => {
                 <Link to={`/contact/view/${contact.id}`} className='btn btn-warning my-1'>
                  <i className='fa fa-eye'/>
                 </Link>
-                <Link to={'/contact/Edit'} className='btn btn-primary my-1'>
+                <Link to={`/contact/Edit/${contact.id}`} onClick={()=>{setName(contact)}} className='btn btn-primary my-1'>
                  <i className='fa fa-pen'/>
                 </Link>
                 <button  to={'/contact/view/:contactId'} className='btn btn-danger my-1'>

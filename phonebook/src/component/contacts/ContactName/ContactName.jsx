@@ -6,6 +6,6 @@ export const ContactName =  [
     {id:5, name:"narjes", mobile:"0123456789", email: "narjessheikhali@gmail.com", photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP7eGrPZRFKAKH2Skyvh_M-za7TJZVfw65ocWvZFPVbaKmacAPohs7KvPinybiu99LcA4&usqp=CAU"},
     {id:6, name:"narjes", mobile:"0123456789", email: "narjessheikhali@gmail.com", photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6GMdvgcGLLtYc_hzMeTNLpKRVjqe5XhDT0hTHqW6KdNxKM4R01sjLM0toTftmPUuFZew&usqp=CAU"},
     {id:7, name:"narjes", mobile:"0123456789", email: "narjessheikhali@gmail.com", photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVKNy38wfvGKqs5oRzuMwpgywiTlF4FmHZ2JRDG2JUWXl3l7wHP_zcQ8adJLDvEMBsiCg&usqp=CAU"},
-    {id:8, name:"narjes", mobile:"0123456789", email: "narjessheikhali@gmail.com", photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy4mGn2H4biENdFN-hIutdbAB9-aXVl08sXAzq_fFY4feDadOGQJH5kHBM1adSIKL2W0&usqp=CAU"
+    {id:8, name:"narjes", mobile:"0123456789nlkn", email: "narjessheikhali@gmail.com", photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWy4mGn2H4biENdFN-hIutdbAB9-aXVl08sXAzq_fFY4feDadOGQJH5kHBM1adSIKL2W0&usqp=CAU"
 }
 ]
