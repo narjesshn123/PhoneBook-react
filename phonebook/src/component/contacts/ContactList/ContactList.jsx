@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import 'D:/react/PhoneBook/PhoneBook-react/phonebook/src/index.css';
 import { ContactName } from '../ContactName/ContactName';
-export const ContactList = () => {
-  const [contacts, setContact] = useState(ContactName)
+export const ContactList = ({contacts, setContact}) => {
+
+  //setContact(props.contacts.contact)//
   const handleDelete = (id) => {
      setContact(contacts.filter(contact=> contact.id !== id))
   }
@@ -97,9 +98,7 @@ export const ContactList = () => {
               </div>
 
              </div>
-             
-             </div>
-             
+             </div>  
             </div>
            
           </div>

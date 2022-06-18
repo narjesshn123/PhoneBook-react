@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { ContactName } from '../ContactName/ContactName'
 import { v4 as uuidv4 } from 'uuid';
-export const AddContact = () => {
+export const AddContact = ({contacts, setContact}) => {
   let navigate = useNavigate();             
   const[names,setName] = useState({
     name:"",
@@ -11,18 +11,15 @@ export const AddContact = () => {
     photo:"",
     mobile:""
   })
-   const [contacts, setContact] = useState(ContactName)
+
   const HandleChange = (e)=>{
 setName({...names,[e.target.name]: e.target.value})
   }
   const HandleAdd = (e)=>{
     e.preventDefault()
-    // const newContact = contacts.concat({...names, id:uuidv4()})
-    // setContact(newContact)
-    setContact([...contacts, {id:9, ...names}])
+    setContact([...contacts, {id:uuidv4(), ...names}])
     setName({name:"", mobile:"", photo:"", email:""})
-    // setName([{id:9, name:"", mobile:"", photo:"", email:"" }])
-    navigate("/contact/List" )
+    navigate("/contact/List")
   }
    
   return (
