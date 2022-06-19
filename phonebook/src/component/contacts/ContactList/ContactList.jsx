@@ -3,22 +3,12 @@ import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import 'D:/react/PhoneBook/PhoneBook-react/phonebook/src/index.css';
 import { ContactName } from '../ContactName/ContactName';
-export const ContactList = ({contacts, setContact,setName, names}) => {
+export const ContactList = ({contacts, setContact,setName}) => {
 
-  //setContact(props.contacts.contact)//
   const handleDelete = (id) => {
      setContact(contacts.filter(contact=> contact.id !== id))
   }
-//  const getContactList = ()=>{
-//   fetch("https://jsonplaceholder.typicode.com/users")
-// .then(Response=>Response.json())
-// .then(data=>setcontactItem(data))
-// }
-// const[contactItem, setcontactItem] = useState([])
-// useEffect(()=>{
-//   document.title="contact";
-//   getContactList()
-// })
+  const [searchItem, setSearchItem] = useState('');        
 
   return (
     <>
@@ -42,7 +32,8 @@ export const ContactList = ({contacts, setContact,setName, names}) => {
             <form className='row'>
               <div className='col'>
               <div className='mb-2'>
-                <input type={'text'} className='form-control' placeholder='search names...'/>
+                <input type={'text'} className='form-control' placeholder='search names...'
+                onChange={(event=>{setSearchItem(event.target.value)})}/>
               </div>
               </div>
               <div className='col'>
@@ -60,7 +51,14 @@ export const ContactList = ({contacts, setContact,setName, names}) => {
     <section className='contact-list'>
       <div className='container'>
         <div className='row'>
-        {contacts.map(contact=>
+        {contacts.filter(contact=>{
+          if(searchItem =="")
+          {return contact}
+          else if(contact.name.toLowerCase().includes(searchItem.toLowerCase())){
+            return contact
+          }
+        })
+        .map(contact=>
           <div className='col-md-6' key={contact.id}>
            
              

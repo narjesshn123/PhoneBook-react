@@ -12,7 +12,7 @@ setName({...names,[e.target.name]: e.target.value})
   }
   const HandleAdd = (e)=>{
     e.preventDefault()
-    setContact([...contacts, {id:uuidv4(), ...names}])
+    setContact([...contacts, {id:Math.floor(Math.random()*1000), ...names}])
     setName({name:"", mobile:"", photo:"", email:""})
     navigate("/contact/List")
   }
